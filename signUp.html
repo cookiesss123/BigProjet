@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        body{
+            font-family: 'Noto Sans TC', sans-serif;
+            color: rgb(40, 36, 36);
+        }
+        .openSans{
+            font-family: 'Open Sans', sans-serif;
+        }
+        .background-center{
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6fdbed;">
+        <div class="container">
+            <h1 class="h5 fw-bold text-center">
+                <a class="navbar-brand" href="index.html">
+                    台灣冰品資訊站<br>ICE CREAM In Taiwan
+                </a>
+            </h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">搜尋冰品</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">熱門冰品
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">店家位置
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">優惠特報
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                    會員專區
+                </a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link btn btn-outline-dark" href="login.html">
+                    登入
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-outline-dark" href="signUp.html">
+                    註冊
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+        <p class="h4">
+            <a href="#" class="text-decoration-none link-info">會員專區</a>
+            <i class="bi bi-arrow-right-short"></i>
+            <a href="#" class="text-decoration-none link-info">註冊</a>
+        </p>
+        <div class="d-flex justify-content-center my-5">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-header bg-info text-white text-center">
+                        <h2>會員註冊 SignUp</h2>
+                    </div>
+                    <div class="card-body py-5">
+                        <div style="background-image: url(https://images.unsplash.com/photo-1563589173312-476d8c36b242?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80); height: 300px;" class="background-center"></div>
+                        <form class="row gy-4 mt-4 justify-content-center">
+                            <div class="col-8 d-flex align-items-center">
+                                <i class="bi bi-person-circle text-info fs-3 me-3"></i>
+                                <input type="text" name="nickName" placeholder="請輸入自訂暱稱" class="form-control" id="signUpNickName">
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-info fs-3 me-3"></i>
+                                <input type="email" name="email" placeholder="請輸入信箱" class="form-control" id="signUpEmail">
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <i class="bi bi-key-fill text-info fs-3 me-3"></i>
+                                <input type="email" name="password" placeholder="請輸入密碼(密碼必須大於3個字)" class="form-control" id="signUpPassword">
+                            </div>
+                            <input type="submit" value="送出" class="btn btn-info w-50" id="signUpSubmit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="js/config.js"></script>
+    <script>
+    // 註冊
+    const signUpNickName = document.querySelector('#signUpNickName');
+    const signUpEmail = document.querySelector('#signUpEmail');
+    const signUpPassword = document.querySelector('#signUpPassword');
+    const signUpSubmit = document.querySelector('#signUpSubmit');
+    signUpSubmit.addEventListener('click',e=>{
+        e.preventDefault();
+        let nickName = signUpNickName.value;
+        let email = signUpEmail.value;
+        let password = signUpPassword.value;
+        if(nickName ==="" || email ==="" || password === ""){
+            return;
+        }
+        signUp(nickName,email,password);
+    })
+
+    function signUp(nickName,email,password){
+        axios.post(`${_url}/signup`,{
+            "nickName":nickName,
+            "email": email,
+            "password": password,
+            // "nickName": 
+        }).then(res=>{
+            console.log(res.data);
+            window.location.replace("http://127.0.0.1:5500/BigProjet/success.html");
+        }).catch(error=>{
+            // console.log(error.response.data);
+            if(error.response.data === "Email format is invalid"){
+                alert('請輸入正確信箱');
+            }else if(error.response.data === "Password is too short"){
+                alert('密碼必須大於3個字');
+            }
+        })
+    }
+
+    // dd@gmail.com
+    // dddd
+    // 哈囉
+    
+    // cookieSSS@gmail.com
+    // cookie
+    // cookieSSS
+
+
+    // https://ithelp.ithome.com.tw/articles/10190062
+    // window.location.replace(location.href) 重刷頁面
+    // 用document.location.href切換後，可以退回到原頁面。
+    // 而用document.location.replace切換後，不可以通過「後退」退回到原頁面。
+    </script>
+</body>
+</html>
