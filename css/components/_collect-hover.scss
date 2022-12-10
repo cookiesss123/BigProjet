@@ -1,0 +1,22 @@
+.collect{
+    .bi-heart{
+        display: block;
+    }
+    .bi-heart-fill{
+        display: none;
+    }
+    &:hover{
+        .bi-heart{
+            display: none;
+        }
+        .bi-heart-fill{
+            display: block;
+        }
+    }
+    .active{
+        display: block;
+    }
+    .remove{
+        display: none;
+    }
+}

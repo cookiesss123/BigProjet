@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        body{
+            font-family: 'Noto Sans TC', sans-serif;
+            color: rgb(40, 36, 36);
+        }
+        .openSans{
+            font-family: 'Open Sans', sans-serif;
+        }
+        .background-center{
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center center;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 藍紫粉 -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6fdbed;">
+        <div class="container">
+            <h1 class="h5 fw-bold text-center">
+                <a class="navbar-brand" href="#">
+                    台灣冰品資訊站<br>ICE CREAM In Taiwan
+                </a>
+            </h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">搜尋冰品</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">熱門冰品
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">店家位置
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">優惠特報
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                    會員專區
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-outline-dark" href="#">
+                    登入 / 註冊
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>   
+    <header style="background-image:url(img/photo-1593558159516-d0be2a960c52.avif); height: 600px;" class="background-center text-center d-flex align-items-center">
+        <div class="container">
+            <h2 class="display-4">隨時掌握冰品最新資訊</h2>
+            <p class="h3">你最會吃的好冰友，帶你發掘附近人氣冰品店</p>
+
+            <!-- 之後再改外觀 -->
+            <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">地區</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">不拘</a></li>
+                  <li><a class="dropdown-item" href="#">台北市</a></li>
+                  <li><a class="dropdown-item" href="#">新北市</a></li>
+                  <li><a class="dropdown-item" href="#">宜蘭縣</a></li>
+                  <li><a class="dropdown-item" href="#">基隆市</a></li>
+                  <li><a class="dropdown-item" href="#">桃園市</a></li>
+                  <li><a class="dropdown-item" href="#">新竹縣市</a></li>
+                  <li><a class="dropdown-item" href="#">苗栗縣</a></li>
+                  <li><a class="dropdown-item" href="#">台中市</a></li>
+                  <li><a class="dropdown-item" href="#">彰化縣</a></li>
+                  <li><a class="dropdown-item" href="#">南投縣</a></li>
+                  <li><a class="dropdown-item" href="#">雲林縣</a></li>
+                  <li><a class="dropdown-item" href="#">嘉義縣</a></li>
+                  <li><a class="dropdown-item" href="#">台南市</a></li>
+                  <li><a class="dropdown-item" href="#">高雄市</a></li>
+                  <li><a class="dropdown-item" href="#">屏東縣</a></li>
+                  <li><a class="dropdown-item" href="#">台東縣</a></li>
+                  <li><a class="dropdown-item" href="#">花蓮縣</a></li>
+                  <li><a class="dropdown-item" href="#">澎湖縣</a></li>
+                  <li><a class="dropdown-item" href="#">金門縣</a></li>
+                  <li><a class="dropdown-item" href="#">連江縣</a></li>
+                </ul>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">評價</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">不拘</a></li>
+                  <li><a class="dropdown-item" href="#">高到低</a></li>
+                  <li><a class="dropdown-item" href="#">低到高</a></li>
+                </ul>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">價格</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">不拘</a></li>
+                  <li><a class="dropdown-item" href="#">低到高</a></li>
+                  <li><a class="dropdown-item" href="#">高到低</a></li>
+                </ul>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">種類</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">不拘</a></li>
+                  <li><a class="dropdown-item" href="#">義式冰淇淋</a></li>
+                  <li><a class="dropdown-item" href="#">霜淇淋</a></li>
+                  <li><a class="dropdown-item" href="#">雪花冰、刨冰</a></li>
+                  <li><a class="dropdown-item" href="#">冰棒</a></li>
+                  <li><a class="dropdown-item" href="#">土耳其冰淇淋</a></li>
+                  <li><a class="dropdown-item" href="#">炒冰</a></li>
+                </ul>
+                <input type="text" class="form-control px-5" aria-label="Text input with dropdown button">
+                <button class="btn"><i class="bi bi-search"></i></button>
+            </div>
+            
+        </div>
+        
+    </header>
+    <main>
+        <section class="container py-5">
+            <h2 class="text-center lh-lg fw-bold">花了很多時間找商家資訊<br>
+                卻總是吃到不符期望的冰品嗎?</h2>
+            <ul class="list-unstyled row g-5">
+                <li class="col">
+                    <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4">想光顧的冰品店太多了，
+                        花費大量時間蒐集各店冰品資訊。</h3>
+                </li>
+                <li class="col">
+                    <img src="https://i.ytimg.com/vi/SWLFkx5KVSA/maxresdefault.jpg" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4">
+                        滿心歡喜的入店，
+                        品嘗後卻發現味道不符預期，
+                        帶著失望離開。</h3>
+                </li>
+                <li class="col">
+                    <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4">想光顧的冰品店太多了，<br>
+                        花費大量時間蒐集各店冰品資訊。</h3>
+                </li>
+            </ul>
+        </section>
+        <section class="container py-5">
+            <h2 class="text-center lh-lg fw-bold">台灣冰品資訊站幫您解決一切問題!</h2>
+            <ul class="list-unstyled row g-5">
+                <li class="col">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/easiest-ever-fruit-and-coconut-ice-cream-1643120950.jpg?crop=0.990xw:0.660xh;0,0.158xh&resize=640:*" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4 text-center fw-bold">快速找到高cp值冰品</h3>
+                    <p class="h5">您可以點擊左上角”搜尋冰
+                        品”欄位，利用篩選器，快速
+                        找到各縣市最便宜、評價最高
+                        的冰品，也可依個人喜好查找
+                        冰品種類。輸入店家或是冰品
+                        名稱關鍵字可快速查找感興趣
+                        的冰品。
+                    </p>
+                </li>
+                <li class="col">
+                    <img src="https://www.blogtyrant.com/wp-content/uploads/2019/07/how-to-start-an-online-store-min.png" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4 text-center fw-bold">掌握店家資訊</h3>
+                    <p class="h5">為您整合各店最完整的資訊，
+                        不須查遍各個網站，點擊”店
+                       家位置”欄位，即可查找特定
+                       店家的詳細資訊，包含菜單、
+                       營業時間、地址、冰品照片、
+                       平均單價、官網、優惠活動...
+                       等等。
+                    </p>
+                </li>
+                <li class="col">
+                    <img src="https://www.monsterinsights.com/wp-content/uploads/2018/01/Driving-Traffic-to-Your-Online-Store.jpg" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4 text-center fw-bold">不錯過好康優惠</h3>
+                    <p class="h5">網站即時更新商家最新資訊，
+                        點擊”優惠特報”可以緊跟各店
+                        最新優惠、活動，第一時間得
+                        知店內新鮮事。透過收藏功能
+                        可以將感興趣的冰品、商家、
+                        優惠消息記錄下來，不忘各個
+                        優惠。
+                    </p>
+                </li>
+                <li class="col">
+                    <img src="https://media.istockphoto.com/id/1367691681/vector/five-star-rating-vector-in-paper-cut-style-design-isolated-on-grey-background-feedback.jpg?s=612x612&w=0&k=20&c=G9InAZmZqq7_rpmPyCkVqngtTix5N2AZpjmxvhrtrbc=" class="img-fluid mb-3" alt="" style="height: 300px;">
+                    <h3 class="h4 text-center fw-bold">吃冰不踩雷</h3>
+                    <p class="h5">網站提供冰友們對各個店家的
+                        評分及評論，為您找出評價最
+                        好的冰品店。您也可以為店家
+                        留下評分、評論，勉勵商家的
+                        同時也和冰友們互相分享資訊。
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="container py-5" id="popular">
+            <h2 class="lh-lg fw-bold">熱門冰品<span class="ms-2 h4">趁熱吃</span></h2>
+            <ul class="list-unstyled row g-4 row-cols-lg-4">
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <img src="https://plus.unsplash.com/premium_photo-1663837827377-d28df735ec75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 200px;">
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <img src="https://plus.unsplash.com/premium_photo-1663837827377-d28df735ec75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 200px;">
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <img src="https://plus.unsplash.com/premium_photo-1663837827377-d28df735ec75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 200px;">
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <img src="https://plus.unsplash.com/premium_photo-1663837827377-d28df735ec75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 200px;">
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 translate-middle m-1 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="container py-5" id="discount">
+            <h2 class="lh-lg fw-bold">最新優惠<span class="ms-2 h4">撿便宜</span></h2>
+            <ul class="list-unstyled row g-4 row-cols-lg-4">
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <p class="bg-light border border-info border-2 p-4">8/5起只要攜帶學生證，冰品
+                                一律88折! 消費滿2000元，可
+                                獲店內吉祥物週邊商品，柴柴
+                                娃娃、柴柴杯具乙個! 
+                                12/5舉辦冰品大胃王冬季賽! 
+                                冠軍可獲得3年. . .  + More
+                            </p>
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <p class="bg-light border border-info border-2 p-4">8/5起只要攜帶學生證，冰品
+                                一律88折! 消費滿2000元，可
+                                獲店內吉祥物週邊商品，柴柴
+                                娃娃、柴柴杯具乙個! 
+                                12/5舉辦冰品大胃王冬季賽! 
+                                冠軍可獲得3年. . .  + More
+                            </p>
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <p class="bg-light border border-info border-2 p-4">8/5起只要攜帶學生證，冰品
+                                一律88折! 消費滿2000元，可
+                                獲店內吉祥物週邊商品，柴柴
+                                娃娃、柴柴杯具乙個! 
+                                12/5舉辦冰品大胃王冬季賽! 
+                                冠軍可獲得3年. . .  + More
+                            </p>
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <h3 class="h4 text-center fw-bold">
+                            <span class="badge rounded-pill bg-info">台北</span>
+                            <span>北門鳳李冰</span>
+                        </h3>
+                        <div class="position-relative">
+                            <p class="bg-light border border-info border-2 p-4">8/5起只要攜帶學生證，冰品
+                                一律88折! 消費滿2000元，可
+                                獲店內吉祥物週邊商品，柴柴
+                                娃娃、柴柴杯具乙個! 
+                                12/5舉辦冰品大胃王冬季賽! 
+                                冠軍可獲得3年. . .  + More
+                            </p>
+                            <a href="#" class="collect">
+                                <i class="bi bi-heart position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                                <i class="bi bi-heart-fill position-absolute bottom-0 end-0 m-2 fs-2"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span> 4.7
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </span>
+                            <span>2000人評價</span>
+                        </a>
+                        <a href="#" class="h5 d-flex justify-content-between text-decoration-none link-dark"> 
+                            <span>紅豆抹茶冰</span>
+                            <span class="openSans fw-bold">$20</span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="container py-5">
+            <h2 class="lh-lg fw-bold">冰品種類<span class="ms-2 h4">好滿足</span></h2>
+            <ul class="list-unstyled row g-5 row-cols-lg-3">
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h4 text-center fw-bold">
+                                    義式冰淇淋
+                                </h3>
+                            </div>
+                            <img class="card-img" src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 300px;">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    義式冰淇淋不使用人工香精或甜
+                                    味劑，強調其天然製程，牛奶和
+                                    鮮奶油含量低、水果含量高。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="mb-2">
+                                <a class="collapseBtn text-decoration-none h3" data-bs-toggle="collapse" href="#collapseGelato" role="button" aria-expanded="false" aria-controls="collapseGelato">
+                                    <i class="bi bi-shop fs-2"></i>
+                                    商店
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseGelato">
+                                <div class="card card-body">
+                                    <ul class="lh-lg">
+                                        <li><a href="#" class="text-decoration-none h5">Mövenpick Café -莫凡彼南港車站店</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來特冰淇淋</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">貨室甜品 HuoShih</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來呷甜甜品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h4 text-center fw-bold">
+                                    霜淇淋
+                                </h3>
+                            </div>
+                            <img class="card-img" src="https://images.unsplash.com/photo-1636564499112-6113e73c504a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c29mdCUyMHNlcnZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid mb-3" alt="" style="height: 300px;">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    也稱為軟冰，由於冷凍過程中引
+                                    入了空氣，因此較軟且密度較小。
+                                    必須快速冷凍，以免晶體生長。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="mb-2">
+                                <a class="collapseBtn text-decoration-none h3" data-bs-toggle="collapse" href="#collapsesoftServe" role="button" aria-expanded="false" aria-controls="collapsesoftServe">
+                                    <i class="bi bi-shop fs-2"></i>
+                                    商店
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapsesoftServe">
+                                <div class="card card-body">
+                                    <ul class="lh-lg">
+                                        <li><a href="#" class="text-decoration-none h5">Mövenpick Café -莫凡彼南港車站店</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來特冰淇淋</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">貨室甜品 HuoShih</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來呷甜甜品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h4 text-center fw-bold">
+                                    雪花冰 / 刨冰
+                                </h3>
+                            </div>
+                            <img class="card-img" src="https://images.unsplash.com/photo-1595275320712-24b6f2b0a984?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid mb-3" alt="" style="height: 300px;">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    直接以牛奶等材料做成冰磚，也
+                                    可稱為綿綿冰。/ 又稱刨冰，可變
+                                    化出四果、八寶等多種口味。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="mb-2">
+                                <a class="collapseBtn text-decoration-none h3" data-bs-toggle="collapse" href="#collapseShavedIce" role="button" aria-expanded="false" aria-controls="collapseShavedIce">
+                                    <i class="bi bi-shop fs-2"></i>
+                                    商店
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseShavedIce">
+                                <div class="card card-body">
+                                    <ul class="lh-lg">
+                                        <li><a href="#" class="text-decoration-none h5">Mövenpick Café -莫凡彼南港車站店</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來特冰淇淋</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">貨室甜品 HuoShih</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來呷甜甜品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h4 text-center fw-bold">
+                                    冰棒
+                                </h3>
+                            </div>
+                            <img class="card-img" src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=887&q=80" class="img-fluid mb-3" alt="" style="height: 300px;">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    將調味料、香料與色素加入水
+                                    、果汁或是牛奶中，放入圓柱型的
+                                    製冰盒中，並冷凍結冰即成冰棒。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="mb-2">
+                                <a class="collapseBtn text-decoration-none h3" data-bs-toggle="collapse" href="#collapsePopsicle" role="button" aria-expanded="false" aria-controls="collapsePopsicle ">
+                                    <i class="bi bi-shop fs-2"></i>
+                                    商店
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapsePopsicle">
+                                <div class="card card-body">
+                                    <ul class="lh-lg">
+                                        <li><a href="#" class="text-decoration-none h5">Mövenpick Café -莫凡彼南港車站店</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來特冰淇淋</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">貨室甜品 HuoShih</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來呷甜甜品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h4 text-center fw-bold">
+                                    土耳其冰淇淋
+                                </h3>
+                            </div>
+                            <img class="card-img" src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="img-fluid mb-3" alt="" style="height: 300px;">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    成分包括羊奶、糖、蘭莖粉和洋乳
+                                    香。蘭莖粉增加土耳其冰淇淋的黏
+                                    稠度，使它被拉長時不易斷開。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="mb-2">
+                                <a class="collapseBtn text-decoration-none h3" data-bs-toggle="collapse" href="#collapseTurkish" role="button" aria-expanded="false" aria-controls="collapseTurkish">
+                                    <i class="bi bi-shop fs-2"></i>
+                                    商店
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseTurkish">
+                                <div class="card card-body">
+                                    <ul class="lh-lg">
+                                        <li><a href="#" class="text-decoration-none h5">Mövenpick Café -莫凡彼南港車站店</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來特冰淇淋</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">貨室甜品 HuoShih</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來呷甜甜品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col">
+                    <a href="#" class="text-decoration-none link-dark">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="h4 text-center fw-bold">
+                                    炒冰
+                                </h3>
+                            </div>
+                            <img class="card-img" src="https://cdn2.ettoday.net/images/2020/2020184.jpg" class="img-fluid mb-3" alt="" style="height: 300px;">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    也稱炒雪糕，泰國知名料理，將
+                                    液體原料倒於鐵板上翻炒，凝固
+                                    而成的冰品。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="mb-2">
+                                <a class="collapseBtn text-decoration-none h3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="bi bi-shop fs-2"></i>
+                                    商店
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <ul class="lh-lg">
+                                        <li><a href="#" class="text-decoration-none h5">Mövenpick Café -莫凡彼南港車站店</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來特冰淇淋</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">貨室甜品 HuoShih</a></li>
+                                        <li><a href="#" class="text-decoration-none h5">來呷甜甜品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="container py-5">
+            <h2 class="lh-lg fw-bold text-center">大廠牌冰品也力推的網站</h2>
+            <ul class="list-unstyled row g-4">
+                <li class="col">
+                    <img src="https://i.marieclaire.com.tw/assets/mc/202112/61CA7B401AC9D1640659776.jpeg" alt="" class="img-fluid">
+                    <h3 class="text-center fw-bold">COLD STONE 酷聖石</h3>
+                </li>
+                <li class="col">
+                    <img src="https://cc.tvbs.com.tw/img/program/upload/2022/04/27/20220427104447-6aa5c39e.png" alt="" class="img-fluid">
+                    <h3 class="text-center fw-bold">Haagen-Dazs 哈根達斯</h3>
+                </li>
+                <li class="col">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E8%8F%9C%E5%96%AE-single110%E5%85%83double140%E5%85%83triple-pop150%E5%85%83-1539851734.jpg" alt="" class="img-fluid">
+                    <h3 class="text-center fw-bold">Baskin Robbins 31冰淇淋</h3>
+                </li>
+            </ul>
+        </section>
+        <footer class="bg-info">
+            <div class="container d-flex justify-content-between align-items-center px-3 py-1">
+                <h3 class="fw-bold text-center h5">台灣冰品資訊站<br>ICE CREAM In Taiwan </h3>
+                <div class="text-center">
+                    <p>本網站僅作為網頁製作練習使用，圖片、資料源自網路，無任何商業利益行為。</p>
+                    <p>Copyright © 2022 台灣冰品資訊站 All Rights Reserved.</p>
+                </div>
+                <div>
+                    <h3 class="h4 text-center">聯絡我們</h3>
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="#"><i class="bi bi-instagram fs-2 me-5"></i></a></li>
+                        <li><a href="#"><i class="bi bi-facebook fs-2"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+   
+    <!-- 搜尋提示字作法 -->
+    <!-- <label for="ice-cream-choice">Choose a flavor:</label>
+    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+    <datalist id="ice-cream-flavors">
+        <option value="Chocolate">
+        <option value="Coconut">
+        <option value="Mint">
+        <option value="Strawberry">
+        <option value="Vanilla">
+    </datalist> -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="js/練習1.js"></script>
+    <script>
+        // collapse
+        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+        var collapseList = collapseElementList.map(function (collapseEl) {
+            return new bootstrap.Collapse(collapseEl)
+        })
+
+        // 防止跳到第一個
+        const collapseBtn = document.querySelector('.collapseBtn');
+        collapseBtn.addEventListener('click',e=>{
+            e.preventDefault();
+        })
+
+        // 星星 如果3分以上 就3顆填滿的星星
+        //  onmouseover="" onmouseout=""
+
+        // 收藏 換實心愛心icon 取消收藏 換空心愛心
+        const popular = document.querySelector('#popular');
+        const discount = document.querySelector('#discount');
+        function addOrRemoveCollect(ele){
+            ele.addEventListener('click',e=>{
+                e.preventDefault();
+                if(!(e.target.classList.contains('active'))){
+                    e.target.classList.remove('remove');
+                    e.target.classList.add('active');
+                }else if(e.target.classList.contains('active')){
+                    e.target.classList.remove('active');
+                    e.target.classList.add('remove');
+                }
+            });
+        }
+        addOrRemoveCollect(popular);
+        addOrRemoveCollect(discount);
+        
+    </script>
+</body>
+</html>
