@@ -132,7 +132,11 @@
             // "nickName": 
         }).then(res=>{
             console.log(res.data);
-            window.location.replace("http://127.0.0.1:5500/BigProjet/success.html");
+            // 練習時方便搞的本地網頁
+            // window.location.replace("http://127.0.0.1:5500/BigProjet/success.html");
+
+            // 真網頁
+            window.location.replace("https://cookiesss123.github.io/BigProjet/success.html");
         }).catch(error=>{
             // console.log(error.response.data);
             if(error.response.data === "Email format is invalid"){
